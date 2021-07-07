@@ -1,0 +1,35 @@
+
+Wicaksa Munajat
+July 5, 2021
+Lab 2 Observations/Notes
+
+Demonstrate each of the following steps to get a grade on this part of the lab assignment
+
+Step 1.Please write the following C program in a Linux environment using vi, emacs, or an editor of your choice.
+- Wrote the code line by line using vim on the terminal.
+
+Step 2.Compile the program using gcc compiler by typing gcc YourProgram.c – o ExecutableName. 
+When it compiles without errors or warnings, make a copy of the source file then go to step 3.
+- Compiled with errors : used print instead of fprint, had an extra bracket 
+- Compiled OK after fixing errors
+
+Step 3.Run the program by typing ./ExecutableName and take a note of your observation.
+- Running the program won't work unless I put in a command line argument (0)
+- Command line argument 0 shows Parent process executing first then child process
+- Command line argument 1 shows parent process executing up to 17, child 0, parent 18-24 before alternating execution
+
+Step 4.Re-run the program by typing ./ExecutableName 3000. Note that the delay in the loop depends on the command line argument you give, here the delay is 3000 microseconds.
+a. Enter delays of 500 and 5000, what happens?
+- 3000 shows parent process and child process alternating print statements
+- 500 also shows alternating print statements
+- 5000 also shows alternating print statements but prints to console a little slower than 500 
+
+
+Step 5. Rewrite the program in Step 1., so that the child process runs the ls command, and that the parent parent process waits until the child process terminates before it exits. Demonstrate your code. You may use the following code snippet.
+- Changed the later portion of the previous code with the one provided in step 5.
+- The result when ran on the terminal is the child executing line of code while the parent waits until child completes its block of code. 
+
+Other notes
+- When stdout to a text file, the output of the file is different than the one on the terminal: child process first then parent process 
+- From Prof. Lamble in forum : "what is seen here is cpu scheduler oft opts to detain processes blocked on I/O; with the redirection to a file this provides an opportunity to allow another process to be selected to run."
+
