@@ -1,0 +1,15 @@
+Lab2.pdf
+Makefile
+lab2notes.txt
+lab2step1
+lab2step1.c
+lab2step1out.txt
+lab2step5
+lab2step5.c
+lab2step5testrun.txt
+lab2testrun.png
+lab2testrun.txt
+w2
+
+ Before forking.
+Child Complete
