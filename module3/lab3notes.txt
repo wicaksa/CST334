@@ -1,0 +1,15 @@
+# Name: <Wicaksa Munajat> 
+# Date: <July 12, 2021> (Due: July 13, 2021)
+# Title: Lab3 Notes
+# Description: Notes and observations for Lab 3
+
+Notes/Observations
+- The lab was fairly straight forward. 
+- Step 3 took a lot of debugging because I could not get the program to put out any result.
+- Step 3 compiled perfectly.
+- My error was using the execpl() function; I used the wrong parameters.
+- ie) I used "grep root" "grep root" instead of separating them into "grep" "grep" "root"
+
+
+Questions
+- Do we need to check when the pipe fails with a condition in the beginning?
