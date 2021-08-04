@@ -1,0 +1,24 @@
+# Name: <Wicaksa Munajat>
+# Lab 5 - Developing multi-threaded applications
+# Date: <July 27, 2021> <Due July 27, 2021>
+
+1. Explain what happens when you run this threadHello.c program; 
+   - Can you list how many threads are created and what values of i are passed? 
+   10 threads are created values of 0-9 for i.
+   - Do you get the same result if you run it multiple times? 
+   You get a different result every time. 
+   - What if you are also running some other demanding processes (e.g., compiling a big program, playing a Flash game on a website, or watching streaming video) when you run this program?
+   It will most likely slow it down since it will be sharing CPU space when it runs the threads. 
+   - The function go() has the parameter arg passed a local variable. 
+   - Are these variables per-thread or shared state? 
+   - Where does the compiler store these variables’ states?
+   - The main() has local variable i. Is this variable per-thread or shared state? Where does the compiler store this variable?
+     This variable is shared because it gets accessed by all of the threads. It is stored in the stack.
+   - Write down your observations. You probably have seen that there is a bug in the program, where threads may print same values of i. Why?
+     This happens because of race condition. One variable might still be in the process of reading a variable while the variable has been changed thus causing duplicates iterations.
+
+2. Write the fix for the program in Step 1, then run your revised program to demonstrate your fix.
+   To fix this program, you need to store the iterations in another data structure then access it for each thread so that each thread will have a unique iteration number. 
+
+3. Matrix multiplication with threads 
+   This portion of the lab was quite difficult but after breaking it down, made it a lot easier. I encountered a lot of bugs the main being a bus error. This occurs when you are trying to  Access something in memory that is not there. The error was made when I was populating my for loop. I used the wrong variable to increment it. 
