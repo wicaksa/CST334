@@ -1,0 +1,22 @@
+# Name: <Wicaksa Munajat>
+# Date: <08/03/2021> (Due: 08/03/2021)
+# Title: Lab6 Write Up
+
+Step1. C Program with semaphores
+- When running this program, it was similar to the one last week where threads
+  Entered the critical section of code one by one.
+- Running it several times shows different threads entering it in a random 
+  order. 
+
+Step2. Producer – Consumer as a classical problem of synchronization
+- This concept of this problem is straight forward. You are trying to add something
+  To a queue by a producer then take it out of the queue by the consumer. The tricky
+  Part is signaling when a producer is writing data into the queue, that no consumer 
+  Can read the data as to not crate a race condition. 
+- This program was implemented using a semaphore. Essentially, the producer would take 
+  One letter out of a letters array, place it in the queue, increment the semaphore value,
+  Which signals the consumer thread to go ahead and read and remove the item from the queue,
+  Then signals to the producer that the item was taken and that it can write again. 
+- While doing this, I ran into numerous bugs when running it on my Mac machine. It was giving
+  Me an incorrect output. But running it on the CSUMB linux server outputs it correctly so 
+  I will just do that from now on. 
